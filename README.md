@@ -1,7 +1,5 @@
 # Cronjobs
 Easy to use PHP class to create and execute scheduled tasks (cronjobs)
-
-Easy to use PHP class to make and execute scheduled tasks (cronjobs)
  
 ##HOW TO USE##
 Make a new class like 'Example' which extends \BD\Cronjobs

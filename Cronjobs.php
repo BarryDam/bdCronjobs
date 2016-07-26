@@ -2,7 +2,8 @@
 	/**
 	 * Cronjobs
 	 * @version  1.0.0
-	 * @author Barry Dam info@barrydam.nl
+	 * @author Barry Dam info@barrydam.nl	 * 
+	 * @source https://github.com/VyseExhale/Cronjobs
 	 *
 	 * Easy to use PHP class to make and execute scheduled tasks (cronjobs)
 	 * 
