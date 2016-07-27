@@ -1,8 +1,8 @@
 <?php
 	/**
 	 * Cronjobs
-	 * @version  1.0.0
-	 * @author Barry Dam info@barrydam.nl	 * 
+	 * @version  1.0.1
+	 * @author Barry Dam info@barrydam.nl
 	 * @source https://github.com/VyseExhale/Cronjobs
 	 *
 	 * Easy to use PHP class to make and execute scheduled tasks (cronjobs)
@@ -70,9 +70,9 @@
 		 */
 		public static function runTasks()
 		{
-			$DateTime      = new \DateTime();
-			$hour       = $DateTime->format('H');
-			$minute     = $DateTime->format('i');
+			$DateTime   = new \DateTime();
+			$hour       = $DateTime->format('G');
+			$minute     = ltrim($DateTime->format('i'), 0);
 			$dayOfmonth = $DateTime->format('j');
 			$month      = $DateTime->format('n');
 			$dayOfWeek  = $DateTime->format('N');
