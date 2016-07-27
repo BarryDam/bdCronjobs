@@ -19,7 +19,7 @@ Example::addTask(
 		Example::EXAMPLE_METHOD, // the task to run
 	 	'10', // every 10th minute
 	 	'*',  // every hour
-	 	'*',  // every day of the month
+	 	'*/2',  // every 2nd month 
 	 	'*',  // every month
 	 	'*'  // every day of the week
 );
