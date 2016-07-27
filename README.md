@@ -3,13 +3,16 @@ Easy to use PHP class to create and execute scheduled tasks (cronjobs)
  
 ##HOW TO USE##
 Make a new class like 'Example' which extends \BD\Cronjobs
-
-add a method to your class along with a const name:
+and add a method to your class along with a const name:
 ```php
-const EXAMPLE_METHOD = 'EXAMPLE_METHOD';
-public static function example_method() {
-		// do some
-		return 'done ';
+class Example extends \BD\Cronjobs {
+
+	const EXAMPLE_METHOD = 'EXAMPLE_METHOD';
+	public static function example_method() {
+			// do some
+			return 'done ';
+	}
+
 }
 ```
 
@@ -24,8 +27,10 @@ Example::addTask(
 	 	'*'  // every day of the week
 );
 ```
-And finally run the tasks 
+And finally run the tasks in cron.php
 ```php
 Example::runTasks();
 ```
 Above will return an array where you can see whichs tasks are run 
+
+P.S. Set your crontab to to cron cron.php every minute
