@@ -1,7 +1,7 @@
 <?php
 	/**
 	 * Cronjobs
-	 * @version  1.0.1
+	 * @version  1.0.2
 	 * @author Barry Dam info@barrydam.nl
 	 * @source https://github.com/VyseExhale/Cronjobs
 	 *
@@ -72,7 +72,9 @@
 		{
 			$DateTime   = new \DateTime();
 			$hour       = $DateTime->format('G');
-			$minute     = ltrim($DateTime->format('i'), 0);
+			$minute     = $DateTime->format('i');
+			if (substr($minute, 0, 1) === '0')
+				$minute = substr($minute, 1);
 			$dayOfmonth = $DateTime->format('j');
 			$month      = $DateTime->format('n');
 			$dayOfWeek  = $DateTime->format('N');
